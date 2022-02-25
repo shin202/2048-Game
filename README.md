@@ -22,3 +22,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### How to play
+Use your arrow keys to move the tiles. When two tiles with the same number touch, they merge into one!
