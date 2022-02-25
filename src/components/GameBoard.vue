@@ -109,13 +109,12 @@ const update_gameboard = (new_gameboard: number[]) => {
     over.value
   )
 
-  moveable()
+  moveable();
+
   if (!keeping.value) {
     winning(2048);
-    remove_controller();
   } else {
     winning(99999);
-    add_controller();
   }
 
   if (gameover()) {
@@ -444,13 +443,15 @@ const bottom_moveable = () => {
 const winning = (condition: number) => {
   if (number.value.includes(condition)) {
     win.value = true
+    remove_controller();
   }
 }
 
 // Keep running when winning
 const keep_running = () => {
   win.value = false
-  keeping.value = true
+  keeping.value = true;
+  add_controller();
 }
 
 const gameover = () => {
