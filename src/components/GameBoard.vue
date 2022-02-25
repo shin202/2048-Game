@@ -111,9 +111,11 @@ const update_gameboard = (new_gameboard: number[]) => {
 
   moveable()
   if (!keeping.value) {
-    winning(2048)
+    winning(2048);
+    remove_controller();
   } else {
-    winning(99999)
+    winning(99999);
+    add_controller();
   }
 
   if (gameover()) {
